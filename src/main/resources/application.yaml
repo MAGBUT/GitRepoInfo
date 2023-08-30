@@ -1,0 +1,3 @@
+api:
+  git:
+    host: https://api.github.com

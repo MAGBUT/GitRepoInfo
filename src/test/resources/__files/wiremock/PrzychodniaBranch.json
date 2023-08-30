@@ -1,0 +1,18 @@
+[
+  {
+    "name": "main",
+    "commit": {
+      "sha": "3b758dcdd338eda1f2cf2d42b2177314c2cccfe9",
+      "url": "https://api.github.com/repos/MAGBUT/Przychodnia/commits/3b758dcdd338eda1f2cf2d42b2177314c2cccfe9"
+    },
+    "protected": false
+  },
+  {
+    "name": "master",
+    "commit": {
+      "sha": "a98810449267d90d77daaa91c3b545e43f9698c3",
+      "url": "https://api.github.com/repos/MAGBUT/Przychodnia/commits/a98810449267d90d77daaa91c3b545e43f9698c3"
+    },
+    "protected": false
+  }
+]

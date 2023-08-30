@@ -2,6 +2,7 @@ package com.example.gitrepoinfo.dto;
 
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 @Builder

@@ -20,7 +20,7 @@ public class GitControllerApi {
     private final GetFullInfoService getFullInfoService;
 
     @GetMapping(value = "/user/{userName}",produces = MediaType.APPLICATION_JSON_VALUE)
-    ResponseEntity<?> getRepos(@PathVariable String userName){
+    public ResponseEntity<?> getRepos(@PathVariable String userName){
         Optional<FullInfoOwnerDto> userInfo = getFullInfoService.getUserInfo(userName);
         if (userInfo.isPresent()){
             return ResponseEntity.ok().body(userInfo);
@@ -30,7 +30,7 @@ public class GitControllerApi {
     }
 
     @GetMapping(value = "/user/{userName}",produces = MediaType.APPLICATION_XML_VALUE)
-    ResponseEntity<?> badAccept(@PathVariable String userName){
+    public ResponseEntity<?> badAccept(@PathVariable String userName){
         ExceptionMessage message = ExceptionMessage.builder().status(406).Message("Wrong accept header, require application/json").build();
         return ResponseEntity.status(406).body(message);
     }
