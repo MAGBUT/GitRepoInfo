@@ -31,7 +31,7 @@ public class GitControllerApi {
 
     @GetMapping(value = "/user/{userName}",produces = MediaType.APPLICATION_XML_VALUE)
     public ResponseEntity<?> badAccept(@PathVariable String userName){
-        ExceptionMessage message = ExceptionMessage.builder().status(406).Message("Wrong accept header, require application/json").build();
+        ExceptionMessage message = ExceptionMessage.builder().status(406).Message("Wrong accept header,application/json required").build();
         return ResponseEntity.status(406).body(message);
     }
 }
