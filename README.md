@@ -22,7 +22,7 @@ The project was created to learn and consolidate knowledge.
 HTTP GET (http://localhost:8080)/api/git/user/{userName}
 ### ResponseIfUserExist
 -H accept application/json
-'''
+```
 {
     "login": "MAGBUT",
     "repositories": [
@@ -50,22 +50,22 @@ HTTP GET (http://localhost:8080)/api/git/user/{userName}
         }
     ]
 }
-'''
+```
 ### ResponseIfUserNotExist
 -H accept application/json
-'''
+```
 {
     "status": 404,
     "message": "WRONG USER NAME, DOESN'T EXIST"
 }
-'''
+```
 ### ResponseIfWrrongAcceptFormat
 -H accept application/xml
-'''
+```
 <ExceptionMessage>
     <status>406</status>
     <message>Wrong accept header,application/json required</message>
 </ExceptionMessage>
-'''
+```
 
    
