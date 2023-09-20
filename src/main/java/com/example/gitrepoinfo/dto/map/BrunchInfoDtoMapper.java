@@ -8,8 +8,8 @@ import org.springframework.stereotype.Service;
 public class BrunchInfoDtoMapper {
     public BranchInfoDto map(Branch branch){
         return BranchInfoDto.builder()
-                .name(branch.getName())
-                .sha(branch.getCommit().getSha())
+                .name(branch.name())
+                .sha(branch.commit().sha())
                 .build();
     }
 }

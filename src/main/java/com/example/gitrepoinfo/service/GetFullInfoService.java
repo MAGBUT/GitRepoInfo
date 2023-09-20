@@ -38,7 +38,7 @@ public class GetFullInfoService {
         Optional<List<RepositoryInfo>> listRepository = repoGetService.getListRepository(userName);
         if (listRepository.isPresent()){
             List<ReposInfoDto> list = listRepository.get().stream()
-                    .filter(repositoryInfo -> !repositoryInfo.isFork())
+                    .filter(repositoryInfo -> !repositoryInfo.fork())
                     .map(repositoryInfo -> repoMap(userName, repositoryInfo))
                     .toList();
             return Optional.of(list);
@@ -47,7 +47,7 @@ public class GetFullInfoService {
     }
 
     private ReposInfoDto repoMap(String userName, RepositoryInfo repositoryInfo) {
-        return reposInfoDtoMapper.map(repositoryInfo, getAllBranch(userName, repositoryInfo.getName()));
+        return reposInfoDtoMapper.map(repositoryInfo, getAllBranch(userName, repositoryInfo.name()));
     }
 
     private List<BranchInfoDto> getAllBranch(String userName,String repositoryName){

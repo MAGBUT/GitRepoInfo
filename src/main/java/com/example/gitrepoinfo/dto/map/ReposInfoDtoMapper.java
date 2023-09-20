@@ -15,7 +15,7 @@ public class ReposInfoDtoMapper {
     private final BranchGetService branchGetService;
     public ReposInfoDto map(RepositoryInfo repo, List<BranchInfoDto> brunch){
         return ReposInfoDto.builder()
-                .name(repo.getName())
+                .name(repo.name())
                 .branches(brunch)
                 .build();
     }
